@@ -235,6 +235,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <None Include="config\Web.Debug.config" />
     <None Include="config\Web.SP.Online.sample.config" />
     <None Include="config\Web.SP.Online.config" />
     <None Include="config\Web.SP.Onprem.IIS.sample.config" />
