@@ -235,6 +235,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <None Include="config\Web.SP.Online.sample.config" />
+    <None Include="config\Web.SP.Online.config" />
+    <None Include="config\Web.SP.Onprem.IIS.sample.config" />
+    <None Include="config\Web.SP.Onprem.IIS.config" />
+    <None Include="config\Web.SP.Onprem.IISExpress.sample.config" />
+    <None Include="config\Web.SP.Onprem.IISExpress.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -243,19 +249,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="config\Web.SP.Online.sample.config" />
-    <None Include="config\Web.SP.Online.config" />
-    <None Include="config\Web.SP.Onprem.IIS.sample.config" />
-    <None Include="config\Web.SP.Onprem.IIS.config" />
-    <None Include="config\Web.SP.Onprem.IISExpress.sample.config" />
-    <None Include="config\Web.SP.Onprem.IISExpress.config" />
-    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.1.1.js" />
-    <Content Include="Scripts\jquery-3.1.1.min.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="signin\readme.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -287,14 +285,13 @@
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Default.pubxml" />
-    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Ajax.cshtml" />
     <Content Include="Views\Secret\Index.cshtml" />
     <Content Include="Views\AccessDenied\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>

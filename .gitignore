@@ -4,6 +4,6 @@
 **/pkgobj/
 *.nupkg
 **/.vs/
-src/Samples/**/config/Web.SP.Online.config
-src/Samples/**/config/Web.SP.Onprem.IIS.config
-src/Samples/**/config/Web.SP.Onprem.IISExpress.config
+src/Samples/MVC5/**/config/Web.SP.Online.config
+src/Samples/MVC5/**/config/Web.SP.Onprem.IIS.config
+src/Samples/MVC5/**/config/Web.SP.Onprem.IISExpress.config
