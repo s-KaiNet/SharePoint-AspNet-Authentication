@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
+     Name="OwinAddinSharePoint"
+     ProductID="{0aeb6f2b-1db1-47c9-ad02-a09eac1fcf3c}"
+     Version="1.0.0.0"
+     SharePointMinVersion="15.0.0.0">
+	<Properties>
+		<Title>Owin Addin</Title>
+		<StartPage>https://localhost:44301/Auth?hostUrl={HostUrl}</StartPage>
+	</Properties>
+
+	<AppPrincipal>
+		<RemoteWebApplication ClientId="95c85bf9-81fc-4d6a-a631-30ea913a04d1" />
+	</AppPrincipal>
+	<AppPermissionRequests AllowAppOnlyPolicy="true">
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+  </AppPermissionRequests>
+</App>

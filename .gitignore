@@ -1,0 +1,8 @@
+**/packages/
+**/bin/
+**/obj/
+*.nupkg
+**/.vs/
+src/Samples/**/config/Web.SP.Online.config
+src/Samples/**/config/Web.SP.Onprem.IIS.config
+src/Samples/**/config/Web.SP.Onprem.IISExpress.config

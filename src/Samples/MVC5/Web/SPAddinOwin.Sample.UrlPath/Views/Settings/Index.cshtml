@@ -1,0 +1,20 @@
+﻿@model SPAddinOwin.Data.Entities.Host
+
+<br/>
+@using (Html.BeginForm("Index", "Settings", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+	<div class="form-group">
+		@Html.LabelFor(m => m.ShortHandUrl, new { @class = "col-md-2 control-label" })
+		<div class="col-sm-9 col-md-10">
+			@Html.TextBoxFor(m => m.ShortHandUrl, new { @class = "form-control" })
+			@Html.HiddenFor(m => m.Id)
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<span class="control-label col-sm-3 col-md-2"></span>
+		<div class="col-sm-9 col-md-10">
+			<button class="btn-default  btn" type="submit">Save</button>
+		</div>
+	</div>
+}

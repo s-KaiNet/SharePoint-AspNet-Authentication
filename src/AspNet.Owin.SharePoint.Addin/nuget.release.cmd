@@ -1,0 +1,1 @@
+nuget pack AspNet.Owin.SharePoint.Addin.csproj -IncludeReferencedProjects -Prop Configuration=Release -OutputDirectory "../../Release"

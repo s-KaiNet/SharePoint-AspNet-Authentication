@@ -1,0 +1,7 @@
+﻿<br/>
+<h2>Access denied</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.Roles))
+{
+	<h4>Only users from following group(s) allowed: @ViewBag.Roles</h4>
+}

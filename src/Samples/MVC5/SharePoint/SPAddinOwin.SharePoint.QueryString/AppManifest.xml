@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
+     Name="SPAddinOwinSharePointQueryString"
+     ProductID="{4b22a8db-6ba7-41f8-a4b4-ee87f3063de6}"
+     Version="1.0.0.0"
+     SharePointMinVersion="15.0.0.0"
+>
+  <Properties>
+    <Title>SPAddinOwin.SharePoint.QueryString</Title>
+    <StartPage>https://localhost:44397/Auth?hostUrl={HostUrl}</StartPage>
+  </Properties>
+	
+	<AppPrincipal>
+		<RemoteWebApplication ClientId="ffb434db-c8ea-420e-a239-e79271676f1e" />
+	</AppPrincipal>
+	<AppPermissionRequests AllowAppOnlyPolicy="true">
+		<AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+	</AppPermissionRequests>
+</App>

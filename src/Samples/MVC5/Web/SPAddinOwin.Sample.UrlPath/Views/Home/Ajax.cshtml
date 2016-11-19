@@ -1,0 +1,23 @@
+﻿@section scripts
+{
+	<script type="text/javascript" src="~/Scripts/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+
+		$(function () {
+			$("button").on("click", function () {
+				var shortHandUrl = window.location.pathname.split("/")[1];
+				var baseUrl = window.location.protocol + "//" + window.location.host + "/" + shortHandUrl;
+
+				$.get(baseUrl + "/api/webapi/get").then(function(data) {
+					$("#log").text("Your host web title: " + data);
+				});
+			});
+		});
+	</script>
+}
+
+<br /><br />
+
+<label id="log"></label>
+<br/>
+<button type="button">Get host web title</button>
