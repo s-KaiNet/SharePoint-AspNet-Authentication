@@ -6,12 +6,12 @@
      Version="1.0.0.0"
      SharePointMinVersion="15.0.0.0">
 	<Properties>
-		<Title>Owin Addin</Title>
+		<Title>SPAddinOwin.SharePoint.UrlPath</Title>
 		<StartPage>https://localhost:44301/Auth?hostUrl={HostUrl}</StartPage>
 	</Properties>
 
 	<AppPrincipal>
-		<RemoteWebApplication ClientId="95c85bf9-81fc-4d6a-a631-30ea913a04d1" />
+		<RemoteWebApplication ClientId="3f7be15b-1c95-459e-bc6d-a49c238d730d" />
 	</AppPrincipal>
 	<AppPermissionRequests AllowAppOnlyPolicy="true">
     <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />

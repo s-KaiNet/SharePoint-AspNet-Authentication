@@ -1,6 +1,7 @@
 **/packages/
 **/bin/
 **/obj/
+**/pkgobj/
 *.nupkg
 **/.vs/
 src/Samples/**/config/Web.SP.Online.config
