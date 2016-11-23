@@ -1,13 +1,12 @@
-using Microsoft.IdentityModel.S2S.Protocols.OAuth2;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.SharePoint.Client;
 using System;
 using System.Net;
 using System.Security.Principal;
 using System.Web;
-using System.Web.Configuration;
+using Microsoft.IdentityModel.S2S.Protocols.OAuth2;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.SharePoint.Client;
 
-namespace AspNet.Owin.SharePoint.Addin
+namespace AspNet.Owin.SharePoint.Addin.Authentication
 {
     /// <summary>
     /// Encapsulates all the information from SharePoint.
@@ -216,7 +215,7 @@ namespace AspNet.Owin.SharePoint.Addin
         /// Gets the database connection string from SharePoint for autohosted add-in.
         /// This method is deprecated because the autohosted option is no longer available.
         /// </summary>
-        [ObsoleteAttribute("This method is deprecated because the autohosted option is no longer available.", true)]
+        [Obsolete("This method is deprecated because the autohosted option is no longer available.", true)]
         public string GetDatabaseConnectionString()
         {
             throw new NotSupportedException("This method is deprecated because the autohosted option is no longer available.");

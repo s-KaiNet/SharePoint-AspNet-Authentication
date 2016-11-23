@@ -2,12 +2,12 @@
 using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AspNet.Owin.SharePoint.Addin.Common;
-using AspNet.Owin.SharePoint.Addin.Provider;
+using AspNet.Owin.SharePoint.Addin.Authentication.Common;
+using AspNet.Owin.SharePoint.Addin.Authentication.Provider;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Infrastructure;
 
-namespace AspNet.Owin.SharePoint.Addin.Auth
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 {
 	public class SPAddInAuthenticationHandler : AuthenticationHandler<SPAddInAuthenticationOptions>
 	{

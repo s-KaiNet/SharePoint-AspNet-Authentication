@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Security.Claims;
-using AspNet.Owin.SharePoint.Addin.Common;
+using AspNet.Owin.SharePoint.Addin.Authentication.Common;
 
-namespace AspNet.Owin.SharePoint.Addin.Context
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 {
 	public class HighTrustContext : SPContext
 	{

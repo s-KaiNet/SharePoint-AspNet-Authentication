@@ -1,1 +1,3 @@
-nuget pack AspNet.Owin.SharePoint.Addin.csproj -IncludeReferencedProjects -Prop Configuration=Release -OutputDirectory "../../Release"
+echo off
+nuget pack AspNet.Owin.SharePoint.Addin.Authentication.csproj -IncludeReferencedProjects -Prop Configuration=Release -OutputDirectory "../../Release"
+pause

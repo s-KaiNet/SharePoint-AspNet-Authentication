@@ -3,7 +3,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Provider;
 using Microsoft.SharePoint.Client;
 
-namespace AspNet.Owin.SharePoint.Addin.Provider
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Provider
 {
 	public class SPAddinAuthenticatedContext : BaseContext
 	{

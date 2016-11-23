@@ -3,7 +3,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AspNet.Owin.SharePoint.Addin.Common;
+using AspNet.Owin.SharePoint.Addin.Authentication.Common;
 using Microsoft.Owin.Infrastructure;
 using Microsoft.Owin.Security.Cookies;
 

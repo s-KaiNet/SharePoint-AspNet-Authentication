@@ -1,4 +1,4 @@
-﻿namespace AspNet.Owin.SharePoint.Addin.Auth
+﻿namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 {
 	public class Constants
 	{

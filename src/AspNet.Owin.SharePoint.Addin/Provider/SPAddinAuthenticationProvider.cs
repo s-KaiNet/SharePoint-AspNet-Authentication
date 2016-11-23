@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace AspNet.Owin.SharePoint.Addin.Provider
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Provider
 {
 	public class SPAddinAuthenticationProvider : ISPAddinAuthenticationProvider
 	{

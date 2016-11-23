@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Web.Mvc;
-using AspNet.Owin.SharePoint.Addin;
-using AspNet.Owin.SharePoint.Addin.Auth;
+using AspNet.Owin.SharePoint.Addin.Authentication.Middleware;
 using Microsoft.Owin.Security;
 
 namespace SPAddinOwin.Sample.QueryString.Controllers
@@ -54,7 +53,7 @@ namespace SPAddinOwin.Sample.QueryString.Controllers
 			public override void ExecuteResult(ControllerContext context)
 			{
 				var properties = new AuthenticationProperties { RedirectUri = RedirectUri };
-				properties.Dictionary[SharePointContext.SPHostUrlKey] = SPHostUrl;
+				properties.Dictionary["SPHostUrl"] = SPHostUrl;
 
 				context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
 			}

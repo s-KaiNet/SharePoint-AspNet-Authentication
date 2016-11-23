@@ -1,1 +1,3 @@
-nuget pack AspNet.Owin.SharePoint.Addin.csproj -IncludeReferencedProjects -Prop Configuration=Debug -Symbols -OutputDirectory "c:\\Nuget"
+echo off
+nuget pack AspNet.Owin.SharePoint.Addin.Authentication.csproj -IncludeReferencedProjects -Prop Configuration=Debug -Symbols -OutputDirectory "c:\\Nuget"
+pause 

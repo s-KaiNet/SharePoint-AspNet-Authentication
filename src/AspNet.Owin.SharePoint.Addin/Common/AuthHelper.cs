@@ -9,7 +9,7 @@ using Microsoft.Owin;
 using Microsoft.SharePoint.Client;
 using FormCollection = Microsoft.Owin.FormCollection;
 
-namespace AspNet.Owin.SharePoint.Addin.Common
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Common
 {
 	internal static class AuthHelper
 	{

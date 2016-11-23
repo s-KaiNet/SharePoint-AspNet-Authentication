@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Security.Claims;
-using AspNet.Owin.SharePoint.Addin.Common;
+using AspNet.Owin.SharePoint.Addin.Authentication.Common;
 
 namespace SPAddinOwin.Sample.UrlPath.Common
 {

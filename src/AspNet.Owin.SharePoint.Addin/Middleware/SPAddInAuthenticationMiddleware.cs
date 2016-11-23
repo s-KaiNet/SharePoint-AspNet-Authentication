@@ -1,4 +1,4 @@
-﻿using AspNet.Owin.SharePoint.Addin.Provider;
+﻿using AspNet.Owin.SharePoint.Addin.Authentication.Provider;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataHandler;
@@ -6,7 +6,7 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Infrastructure;
 using Owin;
 
-namespace AspNet.Owin.SharePoint.Addin.Auth
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 {
 	public class SPAddInAuthenticationMiddleware : AuthenticationMiddleware<SPAddInAuthenticationOptions>
 	{

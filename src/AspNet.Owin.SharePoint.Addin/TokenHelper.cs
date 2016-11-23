@@ -1,9 +1,3 @@
-using Microsoft.IdentityModel;
-using Microsoft.IdentityModel.SecurityTokenService;
-using Microsoft.IdentityModel.S2S.Protocols.OAuth2;
-using Microsoft.IdentityModel.S2S.Tokens;
-using Microsoft.SharePoint.Client;
-using Microsoft.SharePoint.Client.EventReceivers;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,12 +14,18 @@ using System.Text;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Script.Serialization;
+using Microsoft.IdentityModel;
+using Microsoft.IdentityModel.S2S.Protocols.OAuth2;
+using Microsoft.IdentityModel.S2S.Tokens;
+using Microsoft.IdentityModel.SecurityTokenService;
+using Microsoft.SharePoint.Client;
+using Microsoft.SharePoint.Client.EventReceivers;
 using AudienceRestriction = Microsoft.IdentityModel.Tokens.AudienceRestriction;
 using AudienceUriValidationFailedException = Microsoft.IdentityModel.Tokens.AudienceUriValidationFailedException;
 using SecurityTokenHandlerConfiguration = Microsoft.IdentityModel.Tokens.SecurityTokenHandlerConfiguration;
 using X509SigningCredentials = Microsoft.IdentityModel.SecurityTokenService.X509SigningCredentials;
 
-namespace AspNet.Owin.SharePoint.Addin
+namespace AspNet.Owin.SharePoint.Addin.Authentication
 {
     public static class TokenHelper
     {

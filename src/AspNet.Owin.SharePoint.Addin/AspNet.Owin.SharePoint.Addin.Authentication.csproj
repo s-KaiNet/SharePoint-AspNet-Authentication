@@ -7,8 +7,8 @@
     <ProjectGuid>{0B6042A5-621F-4728-AF7A-4208151F023D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AspNet.Owin.SharePoint.Addin</RootNamespace>
-    <AssemblyName>AspNet.Owin.SharePoint.Addin</AssemblyName>
+    <RootNamespace>AspNet.Owin.SharePoint.Addin.Authentication</RootNamespace>
+    <AssemblyName>AspNet.Owin.SharePoint.Addin.Authentication</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -122,11 +122,11 @@
     <Compile Include="Context\HighTrustContext.cs" />
     <Compile Include="Context\SPContext.cs" />
     <Compile Include="Context\SPContextProvider.cs" />
-    <Compile Include="Auth\Constants.cs" />
-    <Compile Include="Auth\SPAddInAuthenticationExtensions.cs" />
-    <Compile Include="Auth\SPAddInAuthenticationHandler.cs" />
-    <Compile Include="Auth\SPAddInAuthenticationMiddleware.cs" />
-    <Compile Include="Auth\SPAddInAuthenticationOptions.cs" />
+    <Compile Include="Middleware\Constants.cs" />
+    <Compile Include="Middleware\SPAddInAuthenticationExtensions.cs" />
+    <Compile Include="Middleware\SPAddInAuthenticationHandler.cs" />
+    <Compile Include="Middleware\SPAddInAuthenticationMiddleware.cs" />
+    <Compile Include="Middleware\SPAddInAuthenticationOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider\ISPAddinAuthenticationProvider.cs" />
     <Compile Include="Provider\SPAddinAuthenticatedContext.cs" />

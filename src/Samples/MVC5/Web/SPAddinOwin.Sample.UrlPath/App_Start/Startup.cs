@@ -1,8 +1,8 @@
 ﻿using System.Configuration;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AspNet.Owin.SharePoint.Addin.Auth;
-using AspNet.Owin.SharePoint.Addin.Provider;
+using AspNet.Owin.SharePoint.Addin.Authentication.Middleware;
+using AspNet.Owin.SharePoint.Addin.Authentication.Provider;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using AspNet.Owin.SharePoint.Addin.Common;
+using AspNet.Owin.SharePoint.Addin.Authentication.Common;
 
-namespace AspNet.Owin.SharePoint.Addin.Caching
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Caching
 {
 	public class DefaultTokenCache : ITokenCache
 	{

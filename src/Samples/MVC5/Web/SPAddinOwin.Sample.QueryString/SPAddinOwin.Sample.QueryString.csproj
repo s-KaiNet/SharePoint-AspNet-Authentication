@@ -44,8 +44,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AspNet.Owin.SharePoint.Addin, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\AspNet.Owin.SharePoint.Addin.0.0.0.1\lib\net452\AspNet.Owin.SharePoint.Addin.dll</HintPath>
+    <Reference Include="AspNet.Owin.SharePoint.Addin.Authentication, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AspNet.Owin.SharePoint.Addin.Authentication.0.0.0.1\lib\net452\AspNet.Owin.SharePoint.Addin.Authentication.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AspNet.Owin.SharePoint.Addin.Common
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Common
 {
 	public class AccessToken
 	{

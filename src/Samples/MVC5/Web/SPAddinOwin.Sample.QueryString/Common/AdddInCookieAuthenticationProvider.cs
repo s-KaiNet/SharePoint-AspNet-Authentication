@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using AspNet.Owin.SharePoint.Addin.Common;
+using AspNet.Owin.SharePoint.Addin.Authentication.Common;
 using Microsoft.Owin.Security.Cookies;
 
 namespace SPAddinOwin.Sample.QueryString.Common

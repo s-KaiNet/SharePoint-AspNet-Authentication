@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Owin.SharePoint.Addin", "AspNet.Owin.SharePoint.Addin.csproj", "{0B6042A5-621F-4728-AF7A-4208151F023D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Owin.SharePoint.Addin.Authentication", "AspNet.Owin.SharePoint.Addin.Authentication.csproj", "{0B6042A5-621F-4728-AF7A-4208151F023D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

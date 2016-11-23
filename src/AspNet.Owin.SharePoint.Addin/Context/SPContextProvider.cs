@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace AspNet.Owin.SharePoint.Addin.Context
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 {
 	public static class SPContextProvider
 	{

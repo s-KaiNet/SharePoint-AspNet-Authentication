@@ -13,7 +13,7 @@ Add-in types supported:
 
 Asp.Net MVC 5:
 ```
-Install-Package AspNet.Owin.SharePoint.Addin
+Install-Package AspNet.Owin.SharePoint.Addin.Authentication
 ```
 
 Or Asp.Net Core (coming soon):

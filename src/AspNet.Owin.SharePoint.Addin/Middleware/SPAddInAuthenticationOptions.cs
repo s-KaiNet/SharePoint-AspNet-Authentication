@@ -1,8 +1,8 @@
-﻿using AspNet.Owin.SharePoint.Addin.Provider;
+﻿using AspNet.Owin.SharePoint.Addin.Authentication.Provider;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 
-namespace AspNet.Owin.SharePoint.Addin.Auth
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 {
 	public class SPAddInAuthenticationOptions : AuthenticationOptions
 	{

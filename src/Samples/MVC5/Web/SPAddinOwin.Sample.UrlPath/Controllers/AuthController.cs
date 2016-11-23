@@ -1,6 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
-using AspNet.Owin.SharePoint.Addin.Auth;
+using AspNet.Owin.SharePoint.Addin.Authentication.Middleware;
 using Microsoft.Owin.Security;
 using SPAddinOwin.Sample.UrlPath.Common;
 

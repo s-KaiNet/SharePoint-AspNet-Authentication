@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Security.Claims;
-using AspNet.Owin.SharePoint.Addin.Caching;
-using AspNet.Owin.SharePoint.Addin.Common;
+using AspNet.Owin.SharePoint.Addin.Authentication.Caching;
+using AspNet.Owin.SharePoint.Addin.Authentication.Common;
 using Microsoft.SharePoint.Client;
 
-namespace AspNet.Owin.SharePoint.Addin.Context
+namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 {
 	//TODO - on prem caching? verifty Realm for on prem
 	public abstract class SPContext

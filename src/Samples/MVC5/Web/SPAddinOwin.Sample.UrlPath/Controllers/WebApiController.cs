@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 using System.Web.Http;
-using AspNet.Owin.SharePoint.Addin.Context;
+using AspNet.Owin.SharePoint.Addin.Authentication.Context;
 
 namespace SPAddinOwin.Sample.UrlPath.Controllers
 {

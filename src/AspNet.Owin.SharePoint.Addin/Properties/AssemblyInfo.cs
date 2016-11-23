@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AspNet.Owin.SharePoint.Addin")]
+[assembly: AssemblyTitle("AspNet.Owin.SharePoint.Addin.Authentication")]
 [assembly: AssemblyDescription("Asp.Net Owin middleware for SharePoint Add-ins for Asp.Net MVC 5")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sergei Sergeev")]
-[assembly: AssemblyProduct("AspNet.Owin.SharePoint.Addin")]
+[assembly: AssemblyProduct("AspNet.Owin.SharePoint.Addin.Authentication")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
