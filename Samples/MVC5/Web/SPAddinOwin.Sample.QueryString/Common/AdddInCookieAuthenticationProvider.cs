@@ -24,7 +24,7 @@ namespace SPAddinOwin.Sample.QueryString.Common
 					throw new Exception("Unable to determine host url");
 				}
 
-				var hostUrl = context.Identity.FindFirst(CustomClaimTypes.SPHostUrl).Value;
+				var hostUrl = context.Identity.FindFirst(SPAddinClaimTypes.SPHostUrl).Value;
 
 				if (!hostUrl.Equals(queryStringHostUrl, StringComparison.OrdinalIgnoreCase))
 				{
@@ -40,6 +40,7 @@ namespace SPAddinOwin.Sample.QueryString.Common
 
 		public void ApplyRedirect(CookieApplyRedirectContext context)
 		{
+			
 			context.Response.Redirect(context.RedirectUri);
 		}
 

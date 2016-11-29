@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 using AspNet.Owin.SharePoint.Addin.Authentication.Middleware;
@@ -20,21 +21,23 @@ namespace SPAddinOwin.Sample.QueryString.Controllers
 				return Redirect(redirectUrl);
 			}
 
-			return new ChallengeResult(Constants.DefaultAuthenticationType, hostUrl, redirectUrl);
+			return new ChallengeResult(SPAddinAuthenticationDefaults.AuthenticationType, hostUrl, redirectUrl);
 		}
 
 		//GET: Login
 		[HttpGet]
 		public ActionResult Login(string returnUrl)
 		{
-			var hostUrl = Request.QueryString["h"];
+			var queryString = new Uri("http://tempuri.org" + returnUrl).ParseQueryString();
+
+			var hostUrl = queryString["h"];
 
 			if (string.IsNullOrEmpty(hostUrl))
 			{
 				throw new Exception("Unable to determine host url");
 			}
 
-			return new ChallengeResult(Constants.DefaultAuthenticationType, hostUrl, returnUrl);
+			return new ChallengeResult(SPAddinAuthenticationDefaults.AuthenticationType, hostUrl, returnUrl);
 		}
 
 		private class ChallengeResult : HttpUnauthorizedResult

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
+     Name="SPAddinOwinSharePointADFS"
+     ProductID="{d378282d-8fb6-4e42-9256-900de7f21114}"
+     Version="1.0.0.0"
+     SharePointMinVersion="15.0.0.0"
+>
+	<Properties>
+		<Title>SPAddinOwin.ADFS</Title>
+		<StartPage>https://onprem-adfs:44399/Auth?hostUrl={HostUrl}</StartPage>
+	</Properties>
+
+	<AppPrincipal>
+		<RemoteWebApplication ClientId="1ad88b28-3255-4e1b-882e-a94411586d2e" />
+	</AppPrincipal>
+	<AppPermissionRequests AllowAppOnlyPolicy="true">
+		<AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+	</AppPermissionRequests>
+</App>

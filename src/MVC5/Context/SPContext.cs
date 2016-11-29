@@ -6,7 +6,6 @@ using Microsoft.SharePoint.Client;
 
 namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 {
-	//TODO - on prem caching? verifty Realm for on prem
 	public abstract class SPContext
 	{
 		public static ITokenCache Cache;
@@ -17,12 +16,12 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 		{
 			get
 			{
-				if (!_claimsPrincipal.HasClaim(c => c.Type == CustomClaimTypes.RefreshToken))
+				if (!_claimsPrincipal.HasClaim(c => c.Type == SPAddinClaimTypes.RefreshToken))
 				{
 					throw new Exception("Unable to find Refresh Token under current user's claims");
 				}
 
-				return _claimsPrincipal.FindFirst(CustomClaimTypes.RefreshToken).Value;
+				return _claimsPrincipal.FindFirst(SPAddinClaimTypes.RefreshToken).Value;
 			}
 		}
 
@@ -30,12 +29,12 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 		{
 			get
 			{
-				if (!_claimsPrincipal.HasClaim(c => c.Type == CustomClaimTypes.CacheKey))
+				if (!_claimsPrincipal.HasClaim(c => c.Type == SPAddinClaimTypes.CacheKey))
 				{
 					throw new Exception("Unable to find User Hash Key under current user's claims");
 				}
 
-				return _claimsPrincipal.FindFirst(CustomClaimTypes.CacheKey).Value;
+				return _claimsPrincipal.FindFirst(SPAddinClaimTypes.CacheKey).Value;
 			}
 		}
 
@@ -43,12 +42,12 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 		{
 			get
 			{
-				if (!_claimsPrincipal.HasClaim(c => c.Type == CustomClaimTypes.Realm))
+				if (!_claimsPrincipal.HasClaim(c => c.Type == SPAddinClaimTypes.Realm))
 				{
 					throw new Exception("Unable to find Realm under current user's claims");
 				}
 
-				return _claimsPrincipal.FindFirst(CustomClaimTypes.Realm).Value;
+				return _claimsPrincipal.FindFirst(SPAddinClaimTypes.Realm).Value;
 			}
 		}
 
@@ -56,12 +55,12 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 		{
 			get
 			{
-				if (!_claimsPrincipal.HasClaim(c => c.Type == CustomClaimTypes.TargetPrincipalName))
+				if (!_claimsPrincipal.HasClaim(c => c.Type == SPAddinClaimTypes.TargetPrincipalName))
 				{
 					throw new Exception("Unable to find TargetPrincipalName under current user's claims");
 				}
 
-				return _claimsPrincipal.FindFirst(CustomClaimTypes.TargetPrincipalName).Value;
+				return _claimsPrincipal.FindFirst(SPAddinClaimTypes.TargetPrincipalName).Value;
 			}
 		}
 
@@ -69,12 +68,12 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 		{
 			get
 			{
-				if (!_claimsPrincipal.HasClaim(c => c.Type == CustomClaimTypes.SPHostUrl))
+				if (!_claimsPrincipal.HasClaim(c => c.Type == SPAddinClaimTypes.SPHostUrl))
 				{
 					throw new Exception("Unable to find SPHostUrl under current user's claims");
 				}
 
-				return new Uri(_claimsPrincipal.FindFirst(CustomClaimTypes.SPHostUrl).Value);
+				return new Uri(_claimsPrincipal.FindFirst(SPAddinClaimTypes.SPHostUrl).Value);
 			}
 		}
 
@@ -82,12 +81,12 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 		{
 			get
 			{
-				if (!_claimsPrincipal.HasClaim(c => c.Type == CustomClaimTypes.SPAppWebUrl))
+				if (!_claimsPrincipal.HasClaim(c => c.Type == SPAddinClaimTypes.SPAppWebUrl))
 				{
 					throw new Exception("Unable to find SPAppWebUrl under current user's claims");
 				}
 
-				return new Uri(_claimsPrincipal.FindFirst(CustomClaimTypes.SPAppWebUrl).Value);
+				return new Uri(_claimsPrincipal.FindFirst(SPAddinClaimTypes.SPAppWebUrl).Value);
 			}
 		}
 

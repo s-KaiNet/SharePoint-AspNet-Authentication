@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
+using System.Security.Claims;
 using System.Security.Principal;
 using System.Text;
 using Microsoft.IdentityModel.S2S.Tokens;
@@ -89,14 +91,20 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Common
 			return null;
 		}
 
-		public static string GetWindowsUserId(IOwinContext context)
+		public static string GetWindowsUserSid(IOwinContext context)
 		{
+			if (context.Authentication.User.Identity.IsAuthenticated &&
+			    context.Authentication.User.HasClaim(c => c.Type == ClaimTypes.PrimarySid))
+			{
+				return context.Authentication.User.FindFirst(c => c.Type == ClaimTypes.PrimarySid).Value;
+			}
+
 			var httpRequest = ((System.Web.HttpContextBase)context.Environment["System.Web.HttpContextBase"]).Request;
 			
-			return httpRequest.LogonUserIdentity.User.Value;
+			return httpRequest.LogonUserIdentity.FindFirst(c => c.Type == ClaimTypes.PrimarySid).Value;
 		}
 
-		public static WindowsIdentity GetWindowsUser(IOwinContext context)
+		public static IIdentity GetHttpRequestIdentity(IOwinContext context)
 		{
 			var httpRequest = ((System.Web.HttpContextBase)context.Environment["System.Web.HttpContextBase"]).Request;
 

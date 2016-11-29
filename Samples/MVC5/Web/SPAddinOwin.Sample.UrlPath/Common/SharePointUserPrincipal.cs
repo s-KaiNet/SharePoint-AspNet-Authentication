@@ -14,8 +14,8 @@ namespace SPAddinOwin.Sample.UrlPath.Common
 		public string LoginName => FindFirst(ClaimTypes.NameIdentifier).Value;
 		public string Name => FindFirst(ClaimTypes.Name).Value;
 		public string Email => FindFirst(ClaimTypes.Email).Value;
-		public string HashKey => FindFirst(CustomClaimTypes.CacheKey).Value;
-		public string RefreshToken => FindFirst(CustomClaimTypes.RefreshToken).Value;
-		public Uri SPHostUrl => new Uri(FindFirst(CustomClaimTypes.SPHostUrl).Value);
+		public string HashKey => FindFirst(SPAddinClaimTypes.CacheKey).Value;
+		public string RefreshToken => FindFirst(SPAddinClaimTypes.RefreshToken).Value;
+		public Uri SPHostUrl => new Uri(FindFirst(SPAddinClaimTypes.SPHostUrl).Value);
 	}
 }

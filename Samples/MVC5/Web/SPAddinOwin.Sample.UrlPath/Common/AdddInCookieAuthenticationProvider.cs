@@ -26,7 +26,7 @@ namespace SPAddinOwin.Sample.UrlPath.Common
 					return Task.FromResult<object>(null);
 				}
 
-				var shortHandUrlClaim = context.Identity.FindFirst(CustomClaimTypes.ShortHandUrl).Value;
+				var shortHandUrlClaim = context.Identity.FindFirst(SPAddinClaimTypes.ShortHandUrl).Value;
 
 				if (!shortHandUrlClaim.Equals(shortHandUrl, StringComparison.OrdinalIgnoreCase))
 				{
@@ -38,13 +38,13 @@ namespace SPAddinOwin.Sample.UrlPath.Common
 
 		public void ResponseSignIn(CookieResponseSignInContext context)
 		{
-			var hostUrl = context.Identity.FindFirst(CustomClaimTypes.SPHostUrl).Value;
+			var hostUrl = context.Identity.FindFirst(SPAddinClaimTypes.SPHostUrl).Value;
 
 			var navigationManager = new NavigationManager(context.OwinContext);
 
 			var host = navigationManager.EnsureHostByUrl(hostUrl);
 
-			context.Identity.AddClaim(new Claim(CustomClaimTypes.ShortHandUrl, host.ShortHandUrl));
+			context.Identity.AddClaim(new Claim(SPAddinClaimTypes.ShortHandUrl, host.ShortHandUrl));
 		}
 
 		public void ApplyRedirect(CookieApplyRedirectContext context)

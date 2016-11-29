@@ -115,14 +115,15 @@
   <ItemGroup>
     <Compile Include="Common\AccessToken.cs" />
     <Compile Include="Common\AuthHelper.cs" />
-    <Compile Include="Common\CustomClaims.cs" />
+    <Compile Include="Common\SPAddinClaimTypes.cs" />
     <Compile Include="Caching\DefaultTokenCache.cs" />
     <Compile Include="Caching\ITokenCache.cs" />
+    <Compile Include="Common\IHostUrlResolver.cs" />
     <Compile Include="Context\AcsContext.cs" />
     <Compile Include="Context\HighTrustContext.cs" />
     <Compile Include="Context\SPContext.cs" />
     <Compile Include="Context\SPContextProvider.cs" />
-    <Compile Include="Middleware\Constants.cs" />
+    <Compile Include="Middleware\SPAddinAuthenticationDefaults.cs" />
     <Compile Include="Middleware\SPAddInAuthenticationExtensions.cs" />
     <Compile Include="Middleware\SPAddInAuthenticationHandler.cs" />
     <Compile Include="Middleware\SPAddInAuthenticationMiddleware.cs" />
@@ -138,6 +139,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>call "$(ProjectDir)nuget.$(ConfigurationName).cmd"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

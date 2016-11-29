@@ -23,7 +23,7 @@ namespace SPAddinOwin.Sample.UrlPath.Controllers
 				return Redirect(redirectUrl);
 			}
 
-			return new ChallengeResult(Constants.DefaultAuthenticationType, host.Url, redirectUrl);
+			return new ChallengeResult(SPAddinAuthenticationDefaults.AuthenticationType, host.Url, redirectUrl);
 		}
 
 		//GET: Login
@@ -40,7 +40,7 @@ namespace SPAddinOwin.Sample.UrlPath.Controllers
 				return HttpNotFound();
 			}
 
-			return new ChallengeResult(Constants.DefaultAuthenticationType, host.Url, returnUrl);
+			return new ChallengeResult(SPAddinAuthenticationDefaults.AuthenticationType, host.Url, returnUrl);
 		}
 
 		private class ChallengeResult : HttpUnauthorizedResult

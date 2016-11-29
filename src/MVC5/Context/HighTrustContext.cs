@@ -10,7 +10,7 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Context
 
 		public HighTrustContext(ClaimsPrincipal claimsPrincipal) : base(claimsPrincipal)
 		{
-			_userId = claimsPrincipal.FindFirst(c => c.Type.Equals(CustomClaimTypes.ADUserId)).Value;
+			_userId = claimsPrincipal.FindFirst(c => c.Type.Equals(SPAddinClaimTypes.ADUserId)).Value;
 		}
 
 		protected override AccessToken CreateAppOnlyAccessToken(Uri host)

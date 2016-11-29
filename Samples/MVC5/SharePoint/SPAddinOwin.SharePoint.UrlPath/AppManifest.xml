@@ -6,12 +6,12 @@
      Version="1.0.0.0"
      SharePointMinVersion="15.0.0.0">
 	<Properties>
-		<Title>SPAddinOwin.SharePoint.UrlPath</Title>
-		<StartPage>https://localhost:44301/Auth?hostUrl={HostUrl}</StartPage>
+		<Title>SPAddinOwin.UrlPath</Title>
+		<StartPage>https://onprem-urlpath:44397/Auth?hostUrl={HostUrl}</StartPage>
 	</Properties>
 
 	<AppPrincipal>
-		<RemoteWebApplication ClientId="3f7be15b-1c95-459e-bc6d-a49c238d730d" />
+		<RemoteWebApplication ClientId="56ea5ef4-2daf-4440-a31d-1e40ab197e63" />
 	</AppPrincipal>
 	<AppPermissionRequests AllowAppOnlyPolicy="true">
     <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />

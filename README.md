@@ -1,4 +1,4 @@
-# SharePoint add-in Asp.Net authentication
+# SharePoint add-in Asp.Net authentication [![analytics](http://www.google-analytics.com/collect?v=1&t=pageview&tid=UA-87971440-5&cid=53bf5757-8d4f-44b3-94c1-1a0f33942f48&dl=https%3A%2F%2Fgithub.com%2Fs-KaiNet%2FSharePoint-AspNet-Authentication)]()  
 Authenticate SharePoint add-ins in Asp.Net applications using modern middleware approach.   
 
 Asp.Net versions supported:  
