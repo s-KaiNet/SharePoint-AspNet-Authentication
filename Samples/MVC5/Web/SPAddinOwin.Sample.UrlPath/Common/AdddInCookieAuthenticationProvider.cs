@@ -9,9 +9,9 @@ using Microsoft.Owin.Security.Cookies;
 
 namespace SPAddinOwin.Sample.UrlPath.Common
 {
-	public class AdddInCookieAuthenticationProvider : ICookieAuthenticationProvider
+	public class AdddInCookieAuthenticationProvider : CookieAuthenticationProvider
 	{
-		public Task ValidateIdentity(CookieValidateIdentityContext context)
+		public override Task ValidateIdentity(CookieValidateIdentityContext context)
 		{
 			if (context.Identity.IsAuthenticated)
 			{
@@ -36,7 +36,7 @@ namespace SPAddinOwin.Sample.UrlPath.Common
 			return Task.FromResult<object>(null);
 		}
 
-		public void ResponseSignIn(CookieResponseSignInContext context)
+		public override void ResponseSignIn(CookieResponseSignInContext context)
 		{
 			var hostUrl = context.Identity.FindFirst(SPAddinClaimTypes.SPHostUrl).Value;
 
@@ -47,7 +47,7 @@ namespace SPAddinOwin.Sample.UrlPath.Common
 			context.Identity.AddClaim(new Claim(SPAddinClaimTypes.ShortHandUrl, host.ShortHandUrl));
 		}
 
-		public void ApplyRedirect(CookieApplyRedirectContext context)
+		public override void ApplyRedirect(CookieApplyRedirectContext context)
 		{
 			var shortHandUrl = context.Request.Path.ToString()
 							.Split(new[] { "/" }, StringSplitOptions.RemoveEmptyEntries)
@@ -67,18 +67,6 @@ namespace SPAddinOwin.Sample.UrlPath.Common
 			var redirectUrl = WebUtilities.AddQueryString(authRedirect.ToString(), context.Options.ReturnUrlParameter, returnUrl);
 
 			context.Response.Redirect(redirectUrl);
-		}
-
-		public void ResponseSignOut(CookieResponseSignOutContext context)
-		{
-		}
-
-		public void Exception(CookieExceptionContext context)
-		{
-		}
-
-		public void ResponseSignedIn(CookieResponseSignedInContext context)
-		{
 		}
 	}
 }

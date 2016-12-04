@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created:cb85b80c-f585-40ff-8bfc-12ff4d0e34a9-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
+     Name="SPAddinOwinSharePointUrlPath"
+     ProductID="{db12f44f-6cb8-4f40-89ca-4097abdf2ad3}"
+     Version="1.0.0.0"
+     SharePointMinVersion="16.0.0.0">
+	<Properties>
+		<Title>SPAddin.Core.UrlPath</Title>
+		<StartPage>https://localhost:44390/Auth?hostUrl={HostUrl}</StartPage>
+	</Properties>
+
+	<AppPrincipal>
+		<RemoteWebApplication ClientId="32687db8-c383-4e99-8559-c575ae33a6e6" />
+	</AppPrincipal>
+	<AppPermissionRequests AllowAppOnlyPolicy="true">
+		<AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="FullControl" />
+	</AppPermissionRequests>
+</App>

@@ -75,7 +75,7 @@ public class HomeController : Controller
 ```
 #### Asp.Net Core (coming soon)
 
-To make it work, you also need `AuthController` configured to perform authentication chanllenge when the user is not yet authenticated or authentication is expired. 
+To make it work, you also need `AuthController` configured to perform authentication challenge when the user is not yet authenticated or authentication is expired. 
 This repository contains samples for using SharePoint middleware, **I highly recommend you to configure samples** on your environment and run them in order to have better udnerstanding around how all the pieces fit together. 
 
 Use [wiki](https://github.com/s-KaiNet/SharePoint-AspNet-Authentication/wiki) to setup samples. 
