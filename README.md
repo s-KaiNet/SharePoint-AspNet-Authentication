@@ -18,7 +18,7 @@ Install-Package AspNet.Owin.SharePoint.Addin.Authentication
 
 Or Asp.Net Core (coming soon):
 ```
-Install-Package AspNet.Core.SharePoint.Addin
+Install-Package AspNet.Core.SharePoint.Addin.Authentication
 ```
 
 Explicitly install one of the SharePoint client libraries:

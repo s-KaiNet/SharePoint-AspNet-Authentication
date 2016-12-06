@@ -118,7 +118,6 @@
     <Compile Include="Common\SPAddinClaimTypes.cs" />
     <Compile Include="Caching\DefaultTokenCache.cs" />
     <Compile Include="Caching\ITokenCache.cs" />
-    <Compile Include="Common\IHostUrlResolver.cs" />
     <Compile Include="Context\AcsContext.cs" />
     <Compile Include="Context\HighTrustContext.cs" />
     <Compile Include="Context\SPContext.cs" />

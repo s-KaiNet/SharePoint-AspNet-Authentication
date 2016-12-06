@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using AspNet.Core.SharePoint.Addin.Authentication.Common;
+using AspNet.Core.SharePoint.Addin.Authentication.Events;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Http.Features.Authentication;
@@ -132,6 +133,8 @@ namespace AspNet.Core.SharePoint.Addin.Authentication.Middleware
 				identity.AddClaim(new Claim(ClaimTypes.Name, user.Title));
 				identity.AddClaim(new Claim(ClaimTypes.Email, user.Email));
 				identity.AddClaim(new Claim(SPAddinClaimTypes.SPHostUrl, spHostUrl.AbsoluteUri));
+
+				Options.Events.OnAuthenticated(new SPAddinOnAuthenticatedContext(Context, user, identity));
 			}
 
 			return ticket;
@@ -166,7 +169,7 @@ namespace AspNet.Core.SharePoint.Addin.Authentication.Middleware
 
 			var redirectUri = TokenHelper.GetAppContextTokenRequestUrl(hostUrl.AbsoluteUri, WebUtility.UrlEncode(postRedirectUrl));
 
-			Response.Redirect(redirectUri);
+			Options.Events.OnRedirectToAuthorizationEndpoint(new SPAddinRedirectToSharePointContext(Context, properties, redirectUri));
 
 			return Task.FromResult(true);
 		}

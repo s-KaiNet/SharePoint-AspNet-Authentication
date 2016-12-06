@@ -5,6 +5,7 @@ using System.Security.Principal;
 using System.Threading.Tasks;
 using AspNet.Owin.SharePoint.Addin.Authentication.Common;
 using AspNet.Owin.SharePoint.Addin.Authentication.Provider;
+using Microsoft.Owin.Logging;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Infrastructure;
 
@@ -12,6 +13,13 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 {
 	public class SPAddInAuthenticationHandler : AuthenticationHandler<SPAddInAuthenticationOptions>
 	{
+		private readonly ILogger _logger;
+
+		public SPAddInAuthenticationHandler(ILogger logger)
+		{
+			_logger = logger;
+		}
+
 		protected override async Task<AuthenticationTicket> AuthenticateCoreAsync()
 		{
 			ClaimsIdentity identity;
@@ -86,10 +94,15 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 				};
 
 				state.Dictionary.Remove(SharePointContext.SPHostUrlKey);
+
+				GenerateCorrelationId(state);
+
 				var stateString = Options.StateDataFormat.Protect(state);
 				var postRedirectUrl = uriBuilder.Uri.GetLeftPart(UriPartial.Path) + "?{StandardTokens}&SPAppWebUrl={SPAppWebUrl}&state=" + stateString;
 
 				var redirectUri = AuthHelper.GetAppContextTokenRequestUrl(hostUrl.AbsoluteUri, WebUtility.UrlEncode(postRedirectUrl));
+
+				_logger.WriteInformation("Redirecting to SharePoint AppRedirect");
 
 				Response.Redirect(redirectUri);
 			}
@@ -101,6 +114,8 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 		{
 			if (Options.CallbackPath.HasValue && Options.CallbackPath == Request.Path)
 			{
+				_logger.WriteInformation("Receiving contextual information");
+
 				if (AuthHelper.IsHighTrustApp())
 				{
 					var logonUserIdentity = AuthHelper.GetHttpRequestIdentity(Context);
@@ -113,6 +128,14 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 						return true;
 					}
 				}
+
+				var state = Request.Query["state"];
+				var properties = Options.StateDataFormat.Unprotect(state);
+				if (!ValidateCorrelationId(properties, _logger))
+				{
+					throw new Exception("Correlation failed.");
+				}
+
 				var ticket = await AuthenticateAsync();
 
 				if (ticket != null)

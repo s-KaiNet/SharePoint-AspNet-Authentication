@@ -85,15 +85,12 @@ namespace SPAddin.Core.UrlPath
 			{
 				routes.MapRoute(
 					name: "Auth",
-					template: "{controller=Auth}/{action=AppRedirect}");
-
+					template: "Auth", defaults: new { controller = "Auth", action = "AppRedirect" });
 				routes.MapRoute(
 					name: "ShortUrl",
 					template: "{shortUrl}/{controller=Home}/{action=Index}");
 
-				routes.MapRoute(
-					name: "default",
-					template: "{controller=Home}/{action=Index}/{id?}");
+				
 			});
 		}
 	}

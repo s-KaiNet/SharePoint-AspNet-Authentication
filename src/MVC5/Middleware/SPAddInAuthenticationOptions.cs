@@ -17,8 +17,6 @@ namespace AspNet.Owin.SharePoint.Addin.Authentication.Middleware
 
 		public ISPAddinAuthenticationProvider Provider { get; set; }
 
-		public IHostUrlResolver HostUrlResolver { get; set; }
-
 		public SPAddInAuthenticationOptions() : base(SPAddinAuthenticationDefaults.AuthenticationType)
 		{
 			Description.Caption = SPAddinAuthenticationDefaults.AuthenticationType;

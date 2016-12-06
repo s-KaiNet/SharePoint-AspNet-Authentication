@@ -4,6 +4,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using AspNet.Core.SharePoint.Addin.Authentication.Common;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.DependencyInjection;
 using SPAddin.Core.UrlPath.DB;
@@ -73,7 +74,7 @@ namespace SPAddin.Core.UrlPath.Common
 			}
 			var queryString = QueryHelpers.ParseQuery(new Uri(context.RedirectUri).Query);
 			var returnUrl = queryString[context.Options.ReturnUrlParameter];
-			var authRedirect = new UriBuilder(context.Request.Path)
+			var authRedirect = new UriBuilder(new Uri(context.Request.GetDisplayUrl()).GetLeftPart(UriPartial.Path))
 			{
 				Path = shortHandUrl + context.Options.LoginPath
 			};

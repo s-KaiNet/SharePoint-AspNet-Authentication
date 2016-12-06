@@ -47,8 +47,8 @@
       <HintPath>..\..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="AspNet.Owin.SharePoint.Addin.Authentication, Version=0.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\AspNet.Owin.SharePoint.Addin.Authentication.0.0.0.3\lib\net452\AspNet.Owin.SharePoint.Addin.Authentication.dll</HintPath>
+    <Reference Include="AspNet.Owin.SharePoint.Addin.Authentication, Version=0.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AspNet.Owin.SharePoint.Addin.Authentication.0.0.0.4\lib\net452\AspNet.Owin.SharePoint.Addin.Authentication.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
