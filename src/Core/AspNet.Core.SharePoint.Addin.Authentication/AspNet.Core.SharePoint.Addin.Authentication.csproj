@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyTitle>AspNet.Core.SharePoint.Addin.Authentication</AssemblyTitle>
+    <VersionPrefix>0.0.0.2</VersionPrefix>
+    <Authors>Sergei Sergeev</Authors>
+    <TargetFramework>net451</TargetFramework>
+    <AssemblyName>AspNet.Core.SharePoint.Addin.Authentication</AssemblyName>
+    <PackageId>AspNet.Core.SharePoint.Addin.Authentication</PackageId>
+    <PackageTags>SharePoint;Asp.Net Core;Authentication;Addin</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/s-KaiNet/SharePoint-AspNet-Authentication</RepositoryUrl>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Identity.Model.Extensions" Version="2.0.1459" />
+    <PackageReference Include="Microsoft.IdentityModel" Version="6.1.7600.16394" />
+    <PackageReference Include="Microsoft.SharePoint2013.CSOM" Version="15.0.4711.1000" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
